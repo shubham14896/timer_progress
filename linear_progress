@@ -1,0 +1,28 @@
+class ViewController: UIViewController {
+
+    @IBOutlet weak var progressBar: UIProgressView!
+    
+    var totalAmount: CGFloat = 12
+    var currentAmount: CGFloat = 1
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupProgress()
+    }
+    
+    private func setupProgress() {
+        progressBar.setProgress((Float(currentAmount / totalAmount)), animated: true)
+    }
+
+    @IBAction func nextBtnTapped() {
+        
+        if currentAmount == totalAmount {
+            print("Its Over")
+            return
+        }
+        
+        currentAmount = currentAmount + 1
+        setupProgress()
+    }
+    
+}
