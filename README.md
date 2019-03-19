@@ -1,2 +1,1 @@
-# timer_progress
-Reverse Timer Progress Ring
+# Reverse Circular Progress Bar
